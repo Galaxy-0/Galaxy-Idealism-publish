@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<div class="home">
-  {{ content }}
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  
+  <div class="date">
+    {{ page.date | date: "%Y-%m-%d" }}
+  </div>
 
   <style>
     /* 图片样式 */
@@ -17,7 +21,7 @@ layout: default
     /* iframe样式 */
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 比例 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       max-width: 100%;
@@ -32,19 +36,7 @@ layout: default
     }
   </style>
 
-  <div class="posts">
-    {% for post in site.posts %}
-    <article class="post">
-      <h2>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <div class="date">
-        {{ post.date | date: "%Y-%m-%d" }}
-      </div>
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-    </article>
-    {% endfor %}
+  <div class="entry">
+    {{ content }}
   </div>
-</div> 
+</article> 
