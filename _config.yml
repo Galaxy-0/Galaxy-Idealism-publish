@@ -1,0 +1,20 @@
+title: Galaxy Idealism
+description: Personal Knowledge Base
+theme: jekyll-theme-minimal  # 或其他主题
+
+# 基本设置
+baseurl: "/Galaxy-Idealism-publish"
+url: "https://galaxy-0.github.io"
+
+# 构建设置
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
