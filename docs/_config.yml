@@ -1,11 +1,34 @@
+# 主题设置
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark" # "air", "contrast", "default", "dirt", "mint", "sunrise"
 
+# 插件支持
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
 # 基本设置
 title: "Galaxy Idealism"
-subtitle: "Personal Knowledge Base"
-name: "Galaxy"
-description: "Personal notes and thoughts"
+description: "Personal Knowledge Base"
+url: "https://galaxy-0.github.io"
+baseurl: "/Galaxy-Idealism-publish"
+
+# 默认布局
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      classes: wide
+      author_profile: false
+      read_time: true
+      show_date: true
+      share: false
 
 # 布局设置
 defaults:
@@ -17,16 +40,6 @@ defaults:
       author_profile: false
       read_time: true
       show_date: true
-
-# 基本设置
-baseurl: "/Galaxy-Idealism-publish"
-url: "https://galaxy-0.github.io"
-
-# 构建设置
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 
 # 排除文件
 exclude:
