@@ -16,7 +16,7 @@ description: "Personal Knowledge Base"
 url: "https://galaxy-0.github.io"
 baseurl: "/Galaxy-Idealism-publish"
 
-# 默认布局
+# 布局设置
 defaults:
   # _posts
   - scope:
@@ -29,17 +29,21 @@ defaults:
       read_time: true
       show_date: true
       share: false
+      sidebar:
+        - title: "相关文章"
+          text: "这里是相关文章列表"
+        - title: "推荐阅读"
+          text: "其他推荐内容"
+      toc: true
+      toc_sticky: true
 
-# 布局设置
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      show_date: true
+# 导航设置
+search: true
+search_full_content: true
+
+# 分页设置
+paginate: 10
+paginate_path: /page:num/
 
 # 排除文件
 exclude:
