@@ -14,7 +14,7 @@ layout: default
     
     /* 鼠标样式 */
     .post-title a {
-      cursor: text;  /* 改为文本选择样式 */
+      cursor: pointer;  /* 改为文本选择样式 */
     }
     
     /* 文章列表样式 */
@@ -90,9 +90,6 @@ layout: default
       </h2>
       <div class="post-date">
         {{ post.date | date: "%Y-%m-%d" }}
-      </div>
-      <div class="entry">
-        {{ post.excerpt }}
       </div>
     </article>
     {% endfor %}
