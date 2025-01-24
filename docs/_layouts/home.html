@@ -6,6 +6,56 @@ layout: default
   {{ content }}
 
   <style>
+    /* 全局深色主题 */
+    body {
+      background-color: #1a1a1a;
+      color: #e6e6e6;
+    }
+    
+    /* 鼠标样式 */
+    .post-title a {
+      cursor: text;  /* 改为文本选择样式 */
+    }
+    
+    /* 文章列表样式 */
+    .posts {
+      margin-top: 2em;
+    }
+    
+    .post {
+      margin-bottom: 1.5em;
+    }
+    
+    .post-title {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    
+    .post-title a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+    
+    .post-title a:hover {
+      color: #66b3ff;
+    }
+    
+    .post-date {
+      color: #999;
+      font-size: 0.9em;
+      margin-top: 0.3em;
+      cursor: default;  /* 日期处保持默认样式 */
+    }
+
+    /* 链接样式 */
+    a {
+      color: #66b3ff;
+    }
+    
+    a:hover {
+      color: #99ccff;
+    }
+
     /* 图片样式 */
     img {
       max-width: 100%;
@@ -35,10 +85,10 @@ layout: default
   <div class="posts">
     {% for post in site.posts %}
     <article class="post">
-      <h2>
+      <h2 class="post-title">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
-      <div class="date">
+      <div class="post-date">
         {{ post.date | date: "%Y-%m-%d" }}
       </div>
       <div class="entry">
