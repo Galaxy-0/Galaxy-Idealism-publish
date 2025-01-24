@@ -1,6 +1,22 @@
-title: Galaxy Idealism
-description: Personal Knowledge Base
-theme: jekyll-theme-minimal  # 或其他主题
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark" # "air", "contrast", "default", "dirt", "mint", "sunrise"
+
+# 基本设置
+title: "Galaxy Idealism"
+subtitle: "Personal Knowledge Base"
+name: "Galaxy"
+description: "Personal notes and thoughts"
+
+# 布局设置
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      show_date: true
 
 # 基本设置
 baseurl: "/Galaxy-Idealism-publish"
